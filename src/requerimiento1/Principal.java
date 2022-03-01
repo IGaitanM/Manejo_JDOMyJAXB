@@ -48,6 +48,12 @@ public class Principal {
 		}
 	}
 	
+	/**
+	 * Método que agrega 3 elementos participante al elemento participantes
+	 * con sus respectivos elementos hijos
+	 * @param participantes elemento llamado participantes
+	 * @param doc nodo documento 
+	 */
 	public static void agregarParticipantes(Element participantes, Document doc) {
 		// Se agrega el primer participante
 		Element participante = doc.createElement("participante");
@@ -83,6 +89,11 @@ public class Principal {
 		participante.appendChild(grupo);	
 	}
 	
+	/**
+	 * Método que crea un archivo xml a partir del árbol dom que hemos creado
+	 * @param doc nodo documento
+	 * @throws TransformerException
+	 */
 	private static void guardar(Document doc) throws TransformerException {
 		//fabrica de Transformer
 		TransformerFactory fabricaConversor = TransformerFactory.newInstance();
