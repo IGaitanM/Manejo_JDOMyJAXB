@@ -33,7 +33,7 @@ public class Principal {
 			fecha.appendChild(doc.createTextNode("20-oct-2018"));
 			concierto.appendChild(fecha);
 			Element hora = doc.createElement("hora");
-			hora.appendChild(doc.createTextNode("20-oct-2018"));
+			hora.appendChild(doc.createTextNode("21:30"));
 			concierto.appendChild(hora);
 			Element participantes = doc.createElement("participantes");
 			concierto.appendChild(participantes);
@@ -58,7 +58,7 @@ public class Principal {
 		participante.appendChild(entrada);
 		
 		Element grupo = doc.createElement("grupo");
-		//Se crea el texto de manera directa
+		//Se crea el texto del grupo de manera directa
 		grupo.appendChild(doc.createTextNode("Las Ardillas de Dakota"));
 		participante.appendChild(grupo);
 
@@ -72,11 +72,11 @@ public class Principal {
 		grupo.appendChild(doc.createTextNode("Fito y Fitipaldis"));
 		participante.appendChild(grupo);
 		
-		// Se agrega el segundo participante
+		// Se agrega el tercer participante
 		participante = doc.createElement("participante");
 		participantes.appendChild(participante);		
 		entrada = doc.createElement("entrada");
-		entrada.appendChild(doc.createTextNode("23:1500"));
+		entrada.appendChild(doc.createTextNode("23:00"));
 		participante.appendChild(entrada);
 		grupo = doc.createElement("grupo");
 		grupo.appendChild(doc.createTextNode("ColdPLay"));
@@ -84,9 +84,9 @@ public class Principal {
 	}
 	
 	private static void guardar(Document doc) throws TransformerException {
-		//fabrica de Transformers
+		//fabrica de Transformer
 		TransformerFactory fabricaConversor = TransformerFactory.newInstance();
-		//Crea el objeto Transfomer, que nos permitira serializar el arbol dom a un fichero
+		//Crea el objeto Transfomer, que nos permite serializar el arbol dom a un fichero
 		Transformer conversor = fabricaConversor.newTransformer();
 		//Crea la fuente de la cual sacaremos el arbol dom
 		DOMSource fuente = new DOMSource(doc); 
