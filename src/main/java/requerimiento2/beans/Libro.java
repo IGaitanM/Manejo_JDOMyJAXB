@@ -1,7 +1,5 @@
 package requerimiento2.beans;
 
-import java.util.List;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
@@ -10,20 +8,20 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(propOrder = {
 		"id",
 	    "titulo",
-	    "precio",
+	    "escritor",
 	    "editorial",
-	    "escritor"
+	    "precio"
 	})
 public class Libro {
 
 	private int id;
 	private String titulo;
-	private double precio;
+	private String precio;
 	private Editorial editorial;
 	private Escritor escritor;
 
 
-	public Libro(int id, String titulo, double precio, Editorial editorial, Escritor escritor) {
+	public Libro(int id, String titulo, String precio, Editorial editorial, Escritor escritor) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
@@ -32,20 +30,19 @@ public class Libro {
 		this.escritor = escritor;
 	}
 
-
 	public Libro() {
 		super();
 
 	}
 
 	@XmlAttribute(name = "id")
-	public int getId_libro() {
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId_libro(int id_libro) {
-		this.id = id_libro;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 
@@ -59,12 +56,12 @@ public class Libro {
 	}
 
 
-	public double getPrecio() {
+	public String getPrecio() {
 		return precio;
 	}
 
 
-	public void setPrecio(double precio) {
+	public void setPrecio(String precio) {
 		this.precio = precio;
 	}
 
@@ -79,22 +76,21 @@ public class Libro {
 	}
 
 
-	public Escritor getAutor() {
+	public Escritor getEscritor() {
 		return escritor;
 	}
 
 
-	public void setAutor(Escritor autor) {
-		this.escritor = autor;
+	public void setEscritor(Escritor escritor) {
+		this.escritor = escritor;
 	}
 
 	@Override
 	public String toString() {
-		return "Libro [id_libro=" + id + ", titulo=" + titulo + ", precio=" + precio + ", editorial=" + editorial
-				+ ", autor=" + escritor + ", librerias=" + "]";
+		return "Libro [id=" + id + ", titulo=" + titulo + ", precio=" + precio + ", editorial=" + editorial
+				+ ", escritor=" + escritor + "]";
 	}
-	
 
-	
+
 	
 }

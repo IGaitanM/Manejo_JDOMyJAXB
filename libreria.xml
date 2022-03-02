@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<libreria id="1">
+    <nombre>Libreria Koreander</nombre>
+    <nombre_dueño>Karl Konrad Koreander</nombre_dueño>
+    <direcion>Calle Fujur</direcion>
+    <libros id="1">
+        <titulo>La Historia Interminable</titulo>
+        <escritor id="1">
+            <nombre>Michael</nombre>
+            <apellidos>Ende</apellidos>
+            <fechaNacimiento>10-12-1929</fechaNacimiento>
+        </escritor>
+        <editorial id="1">
+            <nombre>Alfaguara</nombre>
+            <direcion>Calle Alfaguara</direcion>
+        </editorial>
+        <precio>12.50</precio>
+    </libros>
+    <libros id="4">
+        <titulo>Elantris</titulo>
+        <escritor id="3">
+            <nombre>Brandon</nombre>
+            <apellidos>Sanderson</apellidos>
+            <fechaNacimiento>19-11-1975</fechaNacimiento>
+        </escritor>
+        <editorial id="2">
+            <nombre>Planeta</nombre>
+            <direcion>Av Diagonal 662</direcion>
+        </editorial>
+        <precio>23.30</precio>
+    </libros>
+    <libros id="5">
+        <titulo>El Camino de los Reyes</titulo>
+        <escritor id="3">
+            <nombre>Brandon</nombre>
+            <apellidos>Sanderson</apellidos>
+            <fechaNacimiento>19-11-1975</fechaNacimiento>
+        </escritor>
+        <editorial id="2">
+            <nombre>Planeta</nombre>
+            <direcion>Av Diagonal 662</direcion>
+        </editorial>
+        <precio>17.50</precio>
+    </libros>
+    <libros id="0">
+        <titulo>El Imperio Final</titulo>
+        <escritor id="3">
+            <nombre>Brandon</nombre>
+            <apellidos>Sanderson</apellidos>
+            <fechaNacimiento>19-11-1975</fechaNacimiento>
+        </escritor>
+        <editorial id="2">
+            <nombre>Planeta</nombre>
+            <direcion>Av Diagonal 662</direcion>
+        </editorial>
+        <precio>22.10</precio>
+    </libros>
+</libreria>

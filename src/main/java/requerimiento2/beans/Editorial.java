@@ -6,21 +6,15 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
-@XmlRootElement(name="editorial")
-@XmlType(propOrder = {
-		"id",
-	    "nombre",
-	    "direcion",
-	    "libros"
-	})
+@XmlRootElement(name = "editorial")
+@XmlType(propOrder = { "id", "nombre", "direcion", "libros" })
 public class Editorial {
-	
+
 	private int id;
 	private String nombre;
 	private String direcion;
 	private List<Libro> libros;
-	
+
 	public Editorial() {
 		super();
 	}
@@ -34,12 +28,12 @@ public class Editorial {
 	}
 
 	@XmlAttribute(name = "id")
-	public int getId_editorial() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId_editorial(int id_editorial) {
-		this.id = id_editorial;
+	public void setId_editorial(int id) {
+		this.id = id;
 	}
 
 	public String getNombre() {
@@ -68,9 +62,9 @@ public class Editorial {
 
 	@Override
 	public String toString() {
-		return "Editorial [id_editorial=" + id + ", nombre=" + nombre + ", direcion=" + direcion + ", libros="
-				+ libros + "]";
+		return "Editorial [id=" + id + ", nombre=" + nombre + ", direcion=" + direcion + ", libros=" + libros + "]";
 	}
 
 	
+
 }

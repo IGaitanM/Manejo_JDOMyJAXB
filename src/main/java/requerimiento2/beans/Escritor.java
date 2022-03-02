@@ -22,11 +22,14 @@ public class Escritor {
 	private String fechaNacimiento;
 	private List<Libro> libros;
 
-	public Escritor(String nombre ,String apellidos, String fechaNacimiento) {
+
+	public Escritor(int id, String nombre, String apellidos, String fechaNacimiento, List<Libro> libros) {
 		super();
+		this.id = id;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.fechaNacimiento = fechaNacimiento;
+		this.libros = libros;
 	}
 
 	public Escritor() {
@@ -35,12 +38,12 @@ public class Escritor {
 	}
 
 	@XmlAttribute(name = "id")
-	public int getId_autor() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId_autor(int id_autor) {
-		this.id = id_autor;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getApellidos() {
@@ -78,9 +81,11 @@ public class Escritor {
 
 	@Override
 	public String toString() {
-		return "Autor [id_autor=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fechaNacimiento="
+		return "Escritor [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fechaNacimiento="
 				+ fechaNacimiento + ", libros=" + libros + "]";
 	}
+
+
 	
 
 }

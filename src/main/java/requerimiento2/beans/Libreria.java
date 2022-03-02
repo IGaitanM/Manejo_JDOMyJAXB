@@ -3,17 +3,19 @@ package requerimiento2.beans;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name="libreria")
+@XmlRootElement(name = "libreria")
 @XmlType(propOrder = {
 		"id",
-	    "nombre",
-	    "nombre_dueño",
-	    "direccion",
-	    "libros"
-	})
+		"nombre",
+		"nombre_dueño",
+		"direcion",
+		"libros"
+})
+
 public class Libreria {
 
 	private int id;
@@ -21,7 +23,7 @@ public class Libreria {
 	private String nombre_dueño;
 	private String direcion;
 	private List<Libro> libros;
-	
+
 	public Libreria() {
 		super();
 	}
@@ -34,13 +36,13 @@ public class Libreria {
 		this.direcion = direcion;
 		this.libros = libros;
 	}
-
+	
 	@XmlAttribute(name = "id")
-	public int getId_libreria() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId_libreria(int id_libreria) {
+	public void setId(int id_libreria) {
 		this.id = id_libreria;
 	}
 
@@ -78,12 +80,8 @@ public class Libreria {
 
 	@Override
 	public String toString() {
-		return "Libreria [id_libreria=" + id + ", nombre=" + nombre + ", nombre_dueño=" + nombre_dueño
-				+ ", direcion=" + direcion + ", libros=" + libros + "]";
+		return "Libreria [id_libreria=" + id + ", nombre=" + nombre + ", nombre_dueño=" + nombre_dueño + ", direcion="
+				+ direcion + ", libros=" + libros + "]";
 	}
-	
-	
-	
 
-	
 }
