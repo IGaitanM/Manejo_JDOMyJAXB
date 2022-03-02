@@ -25,10 +25,12 @@ public class Principal {
 			analizador = fabrica.newDocumentBuilder();
 			// Creamos nuevo documento vacio
 			doc = analizador.newDocument();
+			
 			// Añadimos elemento raiz
 			Element concierto = doc.createElement("concierto");
 			doc.appendChild(concierto);
-			// Se añaden los elementos hijos de la raiz
+			
+			// Se añaden los elementos hijos
 			Element fecha = doc.createElement("fecha");
 			fecha.appendChild(doc.createTextNode("20-oct-2018"));
 			concierto.appendChild(fecha);
@@ -37,8 +39,10 @@ public class Principal {
 			concierto.appendChild(hora);
 			Element participantes = doc.createElement("participantes");
 			concierto.appendChild(participantes);
+			
 			// Añadimos tres participantes al elemento participantes.
 			agregarParticipantes(participantes, doc);
+			
 			// Guardamos en disco el nuevo documento XML.
 			guardar(doc);
 			
